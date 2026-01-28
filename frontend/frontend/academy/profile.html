@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Profil utilisateur - Gérencez vos informations et certifications sur Jupython">
+  <meta name="keywords" content="profil, utilisateur, certifications, académie, IT">
+  <title>Mon Profil - Jupython Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white">
+  <header class="bg-gray-900 shadow sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-3">
+        <div class="bg-gradient-to-tr from-orange-400 to-orange-600 text-black font-bold rounded-lg w-10 h-10 flex items-center justify-center text-xl">J</div>
+        <span class="text-white font-extrabold text-lg tracking-wide">Jupython</span>
+      </div>
+      <nav class="flex gap-2 flex-wrap">
+        <a href="../index.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Accueil</a>
+        <a href="dashboard.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Tableau de bord</a>
+        <a href="profile.html" class="bg-orange-500 text-white px-3 py-2 rounded font-semibold shadow hover:bg-orange-600 transition">Profil</a>
+        <a href="login.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Déconnexion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="bg-gray-950 min-h-screen py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-black text-white mb-8">Mon Profil</h1>
+
+      <!-- Informations Utilisateur -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl shadow-lg p-8 mb-8">
+        <div class="flex items-center justify-between mb-8 pb-8 border-b border-gray-800">
+          <div class="flex items-center gap-6">
+            <div class="w-24 h-24 bg-gradient-to-tr from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-4xl font-bold">JD</div>
+            <div>
+              <h2 class="text-2xl font-bold text-white mb-2">Jean Dupont</h2>
+              <p class="text-gray-400 mb-1">📧 jean.dupont@example.com</p>
+              <p class="text-gray-400 mb-3">🎓 Université de Kinshasa</p>
+              <span class="inline-block bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm font-semibold">Expert • 2450 points</span>
+            </div>
+          </div>
+          <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-lg transition">Modifier</button>
+        </div>
+
+        <!-- Statistiques -->
+        <div class="grid grid-cols-3 gap-6 mb-8">
+          <div class="bg-gray-800 p-6 rounded-lg text-center">
+            <div class="text-3xl font-black text-orange-400 mb-2">8</div>
+            <p class="text-gray-400">Certifications</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg text-center">
+            <div class="text-3xl font-black text-orange-400 mb-2">15</div>
+            <p class="text-gray-400">Formations complétées</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg text-center">
+            <div class="text-3xl font-black text-orange-400 mb-2">3/10</div>
+            <p class="text-gray-400">En cours</p>
+          </div>
+        </div>
+
+        <!-- Données personnelles -->
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">Informations personnelles</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="text-gray-400 text-sm">Nom complet</label>
+              <input type="text" value="Jean Dupont" class="w-full mt-2 bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-400" readonly>
+            </div>
+            <div>
+              <label class="text-gray-400 text-sm">Email</label>
+              <input type="email" value="jean.dupont@example.com" class="w-full mt-2 bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-400" readonly>
+            </div>
+            <div>
+              <label class="text-gray-400 text-sm">Université</label>
+              <input type="text" value="Université de Kinshasa" class="w-full mt-2 bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-400" readonly>
+            </div>
+            <div>
+              <label class="text-gray-400 text-sm">Date d'inscription</label>
+              <input type="text" value="15 Janvier 2024" class="w-full mt-2 bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-orange-400" readonly>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl shadow-lg p-8">
+        <h3 class="text-2xl font-bold text-white mb-6">Mes Certifications</h3>
+        <div class="space-y-4">
+          <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl">🏆</div>
+              <div>
+                <p class="font-bold text-white">Cisco CCNA</p>
+                <p class="text-gray-400 text-sm">Obtenue le 10 Novembre 2024</p>
+              </div>
+            </div>
+            <button class="text-orange-400 hover:text-orange-500 font-bold">Télécharger</button>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl">🏆</div>
+              <div>
+                <p class="font-bold text-white">Microsoft Azure Administrator</p>
+                <p class="text-gray-400 text-sm">Obtenue le 5 Décembre 2024</p>
+              </div>
+            </div>
+            <button class="text-orange-400 hover:text-orange-500 font-bold">Télécharger</button>
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="text-3xl">🏆</div>
+              <div>
+                <p class="font-bold text-white">AWS Solutions Architect</p>
+                <p class="text-gray-400 text-sm">Obtenue le 20 Janvier 2025</p>
+              </div>
+            </div>
+            <button class="text-orange-400 hover:text-orange-500 font-bold">Télécharger</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

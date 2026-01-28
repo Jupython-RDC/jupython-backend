@@ -1,0 +1,221 @@
+/* ------------------------------
+   PALETTE DE COULEURS
+------------------------------ */
+:root {
+    --black: #0B0F14;      /* Fond principal */
+    --white: #F5F7FA;      /* Blanc cassé (texte clair, cartes) */
+    --gray: #f2f2f2;
+    --dark-gray: #222;
+    --orange: #FF8F00;     /* Accent / hover */
+    --orange-dark: #e07f00;
+    --green: #00C853;      /* Primaire (CTA) */
+    --text-light: #9AA0A6; /* Texte secondaire */
+}
+
+/* ------------------------------
+   RESET GLOBAL
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   NAVIGATION BAR
+------------------------------ */
+/* Adaptation pour la structure existante: header, .header, .navbar */
+.navbar, header, .header {
+    width: 100%;
+    padding: 18px 80px;
+    background-color: rgba(10, 10, 10, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+/* Adapter les liens de nav vers .nav-links également */
+.navbar ul li a,
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background-color: var(--orange);
+    border-radius: 8px;
+    color: var(--white) !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: var(--orange-dark);
+}
+
+/* ------------------------------
+   SECTIONS GÉNÉRALES
+------------------------------ */
+section {
+    padding: 100px 80px;
+}
+
+.section-title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+/* ------------------------------
+   FORMULAIRES
+------------------------------ */
+form {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--orange);
+    background-color: #fff;
+    outline: none;
+}
+
+/* bouton */
+.btn {
+    width: 100%;
+    background-color: var(--orange);
+    padding: 12px;
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--orange-dark);
+}
+
+/* ------------------------------
+   CARTES (Ex: Classes, Certifications)
+------------------------------ */
+.card {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer, .footer {
+    background-color: var(--black);
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-light);
+}
+
+footer h3, .footer h3 {
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+footer a, .footer a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+footer a:hover, .footer a:hover {
+    color: var(--white);
+}
+
+/* ------------------------------
+  RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+    .navbar, header, .header {
+        padding: 15px 20px;
+    }
+
+    section {
+        padding: 80px 25px;
+    }
+
+    footer, .footer {
+        padding: 40px 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+

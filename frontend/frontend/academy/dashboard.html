@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tableau de bord - Suivez vos formations et progressions sur Jupython">
+  <meta name="keywords" content="tableau de bord, formations, progression, académie, IT">
+  <title>Tableau de bord - Jupython Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white">
+  <header class="bg-gray-900 shadow sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-3">
+        <div class="bg-gradient-to-tr from-orange-400 to-orange-600 text-black font-bold rounded-lg w-10 h-10 flex items-center justify-center text-xl">J</div>
+        <span class="text-white font-extrabold text-lg tracking-wide">Jupython</span>
+      </div>
+      <nav class="flex gap-2 flex-wrap">
+        <a href="../index.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Accueil</a>
+        <a href="dashboard.html" class="bg-orange-500 text-white px-3 py-2 rounded font-semibold shadow hover:bg-orange-600 transition">Tableau de bord</a>
+        <a href="profile.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Profil</a>
+        <a href="login.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Déconnexion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="bg-gray-950 min-h-screen py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Bienvenue -->
+      <div class="mb-12">
+        <h1 class="text-4xl font-black text-white mb-2">Bienvenue, Jean!</h1>
+        <p class="text-gray-400">Vous êtes classé <strong class="text-orange-400">#5</strong> avec <strong class="text-orange-400">2450 points</strong></p>
+      </div>
+
+      <!-- Statistiques principales -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <p class="text-gray-400 text-sm mb-2">Heures d'apprentissage</p>
+          <p class="text-3xl font-black text-orange-400">127h</p>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <p class="text-gray-400 text-sm mb-2">Formations complétées</p>
+          <p class="text-3xl font-black text-orange-400">15</p>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <p class="text-gray-400 text-sm mb-2">Certifications obtenues</p>
+          <p class="text-3xl font-black text-orange-400">8</p>
+        </div>
+        <div class="bg-gray-900 border border-gray-800 rounded-xl p-6">
+          <p class="text-gray-400 text-sm mb-2">Taux de réussite</p>
+          <p class="text-3xl font-black text-orange-400">92%</p>
+        </div>
+      </div>
+
+      <!-- Formations en cours -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl shadow-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold text-white mb-6">Formations en cours</h2>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">📚</div>
+            <div class="flex-1">
+              <h3 class="font-bold text-white mb-1">Cisco CCNP - Routing & Switching</h3>
+              <p class="text-gray-400 text-sm mb-3">Module 4 sur 6 • 65% complet</p>
+              <div class="w-full bg-gray-800 rounded-full h-2">
+                <div class="bg-orange-500 h-2 rounded-full" style="width: 65%"></div>
+              </div>
+            </div>
+            <button class="text-orange-400 hover:text-orange-500 font-bold whitespace-nowrap ml-4">Continuer →</button>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">☁️</div>
+            <div class="flex-1">
+              <h3 class="font-bold text-white mb-1">AWS Cloud Practitioner</h3>
+              <p class="text-gray-400 text-sm mb-3">Module 2 sur 5 • 40% complet</p>
+              <div class="w-full bg-gray-800 rounded-full h-2">
+                <div class="bg-orange-500 h-2 rounded-full" style="width: 40%"></div>
+              </div>
+            </div>
+            <button class="text-orange-400 hover:text-orange-500 font-bold whitespace-nowrap ml-4">Continuer →</button>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🔐</div>
+            <div class="flex-1">
+              <h3 class="font-bold text-white mb-1">CompTIA Security+</h3>
+              <p class="text-gray-400 text-sm mb-3">Module 3 sur 5 • 55% complet</p>
+              <div class="w-full bg-gray-800 rounded-full h-2">
+                <div class="bg-orange-500 h-2 rounded-full" style="width: 55%"></div>
+              </div>
+            </div>
+            <button class="text-orange-400 hover:text-orange-500 font-bold whitespace-nowrap ml-4">Continuer →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommandations -->
+      <div class="bg-gray-900 border border-gray-800 rounded-xl shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">Formations recommandées</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-lg p-6 hover:border-orange-500/50 border border-gray-700 transition cursor-pointer">
+            <div class="text-4xl mb-4">🌐</div>
+            <h3 class="font-bold text-white mb-2">Python pour Débutants</h3>
+            <p class="text-gray-400 text-sm mb-4">Apprenez les bases de Python avec des projets pratiques.</p>
+            <p class="text-orange-400 font-bold text-sm">→ S'inscrire</p>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-6 hover:border-orange-500/50 border border-gray-700 transition cursor-pointer">
+            <div class="text-4xl mb-4">💾</div>
+            <h3 class="font-bold text-white mb-2">Gestion de Bases de Données</h3>
+            <p class="text-gray-400 text-sm mb-4">Maîtrisez SQL et les concepts de bases de données.</p>
+            <p class="text-orange-400 font-bold text-sm">→ S'inscrire</p>
+          </div>
+          <div class="bg-gray-800 rounded-lg p-6 hover:border-orange-500/50 border border-gray-700 transition cursor-pointer">
+            <div class="text-4xl mb-4">🚀</div>
+            <h3 class="font-bold text-white mb-2">DevOps Essentials</h3>
+            <p class="text-gray-400 text-sm mb-4">Introduction à Docker, Kubernetes et le CI/CD.</p>
+            <p class="text-orange-400 font-bold text-sm">→ S'inscrire</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

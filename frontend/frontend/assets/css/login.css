@@ -1,0 +1,210 @@
+/* ------------------- */
+/* RESET DE BASE       */
+/* ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: url('../images/bg.jpg') center/cover no-repeat fixed;
+    position: relative;
+}
+
+/* Assombrir le fond */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+    z-index: -1;
+}
+
+/* ------------------- */
+/* NAVBAR              */
+/* ------------------- */
+header, .header {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header nav a {
+    margin: 0 18px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+header .btn-connect {
+    background: #ff6600;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ------------------- */
+/* CONTAINER PRINCIPAL */
+/* ------------------- */
+.login-wrapper {
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-box {
+    width: 430px;
+    background: #fff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.login-box img {
+    width: 60px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.login-box h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.login-box p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* ------------------- */
+/* BOUTON GOOGLE       */
+/* ------------------- */
+.btn-google {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-google img {
+    width: 22px;
+    margin-right: 10px;
+}
+
+/* ------------------- */
+/* FORMULAIRES         */
+/* ------------------- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-icon i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    background: var(--orange);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: var(--orange-dark);
+}
+
+.login-box .link-register {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-box .link-register a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+/* ------------------- */
+/* FOOTER              */
+/* ------------------- */
+footer, .footer {
+    background: #000;
+    color: #ddd;
+    padding: 50px 40px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer h3 {
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+footer a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+footer a:hover {
+    color: #fff;
+}
+

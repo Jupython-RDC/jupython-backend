@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /academy/login.html
+Disallow: /academy/register.html
+Disallow: /academy/profile.html
+Disallow: /academy/dashboard.html
+
+Sitemap: https://jupython.cd/sitemap.xml
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+
+# Bing-specific
+User-agent: Bingbot
+Allow: /

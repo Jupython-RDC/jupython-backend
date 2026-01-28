@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact - Jupython</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="bg-gray-900 shadow">
+    <div class="max-w-5xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-3">
+        <div class="bg-gradient-to-tr from-orange-400 to-orange-600 text-black font-bold rounded-lg w-10 h-10 flex items-center justify-center text-xl">J</div>
+        <span class="text-white font-extrabold text-lg tracking-wide">Jupython</span>
+      </div>
+      <nav class="flex gap-2 flex-wrap">
+        <a href="index.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Accueil</a>
+        <a href="about.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">À propos</a>
+        <a href="projects.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Projets</a>
+        <a href="academy/login.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Academy</a>
+        <a href="rankings.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Classements</a>
+        <a href="courses.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Formations</a>
+        <a href="contact.html" class="bg-orange-500 text-white px-3 py-2 rounded font-semibold shadow hover:bg-orange-600 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="bg-gray-950 min-h-screen py-12 px-4">
+    <section class="max-w-xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white text-center mb-8">Contactez-nous</h2>
+      <form method="post" action="/contact" class="bg-gray-800 rounded-xl shadow-lg p-8 flex flex-col gap-4">
+        <input class="bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" name="name" placeholder="Nom" required>
+        <input class="bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" type="email" name="email" placeholder="Email" required>
+        <textarea class="bg-gray-900 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400" name="message" rows="6" placeholder="Votre message" required></textarea>
+        <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-3 rounded-lg transition" type="submit">Envoyer</button>
+      </form>
+      <div class="mt-8 bg-gray-800 rounded-xl p-6">
+        <h4 class="text-orange-400 font-bold mb-2">UPN</h4>
+        <p class="text-gray-400">Adresse • Téléphone • Réseaux sociaux</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

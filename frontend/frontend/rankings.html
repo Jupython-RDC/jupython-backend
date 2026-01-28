@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Classements en temps réel des étudiants Jupython. Découvrez les meilleurs élèves et leurs certifications.">
+  <meta name="keywords" content="classements, étudiants, certifications, leaderboard, Jupython">
+  <meta name="robots" content="index, follow">
+  <title>Classements - Jupython</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="bg-gray-900 shadow">
+    <div class="max-w-5xl mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center gap-3">
+        <div class="bg-gradient-to-tr from-orange-400 to-orange-600 text-black font-bold rounded-lg w-10 h-10 flex items-center justify-center text-xl">J</div>
+        <span class="text-white font-extrabold text-lg tracking-wide">Jupython</span>
+      </div>
+      <nav class="flex gap-2 flex-wrap">
+        <a href="index.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Accueil</a>
+        <a href="about.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">À propos</a>
+        <a href="projects.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Projets</a>
+        <a href="academy/login.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Academy</a>
+        <a href="rankings.html" class="bg-orange-500 text-white px-3 py-2 rounded font-semibold shadow hover:bg-orange-600 transition">Classements</a>
+        <a href="courses.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Formations</a>
+        <a href="contact.html" class="text-gray-300 hover:text-orange-400 px-3 py-2 rounded transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="bg-gray-950 min-h-screen py-12 px-4">
+    <section class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white text-center mb-2">Classements</h2>
+      <div class="flex flex-wrap gap-4 justify-center mb-8 mt-8" id="rankings-page">
+        <select class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400">
+          <option>Plateforme</option><option>Cisco</option><option>IBM</option><option>Microsoft</option><option>Udemy</option><option>Coursera</option><option>OpenClassrooms</option>
+        </select>
+        <select class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400">
+          <option>Université</option><option>Unikin</option><option>UPN</option>
+        </select>
+        <select class="bg-gray-800 text-gray-200 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400">
+          <option>Niveau</option><option>Beginner</option><option>Advanced</option>
+        </select>
+      </div>
+      <div class="overflow-x-auto mt-8">
+        <table class="min-w-full bg-gray-800 rounded-xl overflow-hidden">
+          <thead class="bg-orange-500/10">
+            <tr class="text-orange-400 text-left">
+              <th class="px-6 py-3">Photo</th>
+              <th class="px-6 py-3">Nom</th>
+              <th class="px-6 py-3">Université</th>
+              <th class="px-6 py-3">Score</th>
+              <th class="px-6 py-3">Badge</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-700">
+              <td class="px-6 py-4"><div class="w-10 h-10 rounded-full bg-orange-300"></div></td>
+              <td class="px-6 py-4 text-white">Fatou</td>
+              <td class="px-6 py-4 text-gray-300">Université A</td>
+              <td class="px-6 py-4 text-white font-bold">240</td>
+              <td class="px-6 py-4"><span class="bg-orange-300 text-gray-900 px-3 py-1 rounded-full font-bold">Expert</span></td>
+              <td class="px-6 py-4"><a class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 rounded-lg transition text-center" href="academy/profile.html">Voir profil</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/rankings.js"></script>
+</body>
+</html>
