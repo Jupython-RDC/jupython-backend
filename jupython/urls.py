@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -31,4 +34,11 @@ urlpatterns = [
     # Token endpoints (alternate access)
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # Frontend root (index served by Django templates)
+    path('', TemplateView.as_view(template_name='index.html')),
+]
+
+# Serve static frontend assets in development
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=str(settings.BASE_DIR / 'frontend' / 'frontend' / 'assets'))
 ]
