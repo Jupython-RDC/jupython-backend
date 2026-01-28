@@ -150,12 +150,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/assets/'
 
-# Dossiers statiques supplémentaires (assets du frontend intégré)
+# Emplacement des fichiers statiques issus du frontend (dev)
 STATICFILES_DIRS = [
     BASE_DIR / 'frontend' / 'frontend' / 'assets',
 ]
+
+# Racine de collecte des fichiers statiques (pour collectstatic en production)
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

@@ -6,7 +6,11 @@ def compute_ranking():
     data = []
 
     for user in User.objects.all():
-        score = Enrollment.objects.filter(user=user).count()
+            cert_score = Certificate.objects.filter(user=user, verified=True).count()
+            if cert_score > 0:
+                score = cert_score
+            else:
+                score = Enrollment.objects.filter(user=user).count()
         data.append({
             "username": user.username,
             "university": getattr(user, 'university', ''),

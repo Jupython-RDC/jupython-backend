@@ -32,3 +32,15 @@ class Enrollment(models.Model):
     formation = models.ForeignKey(Formation, on_delete=models.CASCADE)
     date_joined = models.DateTimeField(auto_now_add=True)
 
+
+class Certificate(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    formation = models.ForeignKey(Formation, on_delete=models.CASCADE)
+    certificate_url = models.URLField()
+    verified = models.BooleanField(default=False)
+    issued_at = models.DateTimeField(null=True, blank=True)
+    verified_at = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"Certificate {self.id} - {self.user} - {self.formation}"
+
