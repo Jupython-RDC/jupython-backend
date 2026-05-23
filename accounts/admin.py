@@ -1,5 +1,17 @@
 from django.contrib import admin
-from .models import User
+from django.contrib.auth.admin import UserAdmin
+from .models import User, UserProfile
 
-# Register the custom User model so it appears in the Django admin
-admin.site.register(User)
+class CustomUserAdmin(UserAdmin):
+    model = User
+    fieldsets = UserAdmin.fieldsets + (
+        (None, {'fields': ('university',)}),
+    )
+    add_fieldsets = UserAdmin.add_fieldsets + (
+        (None, {'fields': ('university',)}),
+    )
+
+admin.site.register(User, CustomUserAdmin)
+
+# Register the UserProfile model
+admin.site.register(UserProfile)

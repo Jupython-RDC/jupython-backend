@@ -1,10 +1,38 @@
-venv/
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-db.sqlite3
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+env/
 .env
+
+# Database
+db.sqlite3
+
+# Media & Static files
+# Ignorer les uploads utilisateurs et les fichiers statiques collectés
+media/
+staticfiles/
+
+# Logs
+*.log
+
+# Editors/IDE
 .vscode/
 .idea/
-*.log
-env/
-/.pytest_cache/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+# Testing
+.pytest_cache/
+nosetests.xml
+coverage.xml
+.coverage
+htmlcov/
