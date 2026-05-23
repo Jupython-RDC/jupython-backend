@@ -2,22 +2,35 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 
 # Environments
 venv/
 env/
 .env
+.venv
+env.bak
+venv.bak
 
 # Database
 db.sqlite3
+db.sqlite3-journal
+*.db
 
 # Media & Static files
-# Ignorer les uploads utilisateurs et les fichiers statiques collectés
 media/
 staticfiles/
+static/root/
+
+# Django specific
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
 
 # Logs
 *.log
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Editors/IDE
 .vscode/
@@ -36,3 +49,8 @@ nosetests.xml
 coverage.xml
 .coverage
 htmlcov/
+
+# Distribution / packaging
+node_modules/
+build/
+dist/
